@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prueba modelo</title>
+</head>
+<body>
+  {{ pruebas }}
+  <ul>
+
+    {% for prueba in pruebas %}
+    <li>{{ prueba.titulo }} - {{ prueba.subtitulo }}</li>
+    {% endfor %}
+  </ul>
+    
+</body>
+</html>
