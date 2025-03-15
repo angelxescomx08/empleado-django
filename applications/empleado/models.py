@@ -1,6 +1,7 @@
 from django.db import models
 
 from applications.departamento.models import Departamento
+from ckeditor.fields import RichTextField
 
 
 class Habilidades(models.Model):
@@ -30,6 +31,7 @@ class Empleado(models.Model):
         "Imagen", upload_to="empleado/imagenes/", blank=True, null=True
     )
     habilidades = models.ManyToManyField(Habilidades)
+    hoja_vida = RichTextField()
 
     def __str__(self) -> str:
         return str(self.id) + "-" + self.first_name + " " + self.last_name
